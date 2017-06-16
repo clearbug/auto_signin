@@ -1,0 +1,26 @@
+{
+  "name": "auto_signin",
+  "version": "1.0.0",
+  "description": "Just auto signin.",
+  "main": "index.js",
+  "bin": {
+    "autosignin": "./bin/auto_signin.sh",
+    "jdsignin": "./bin/jd_signin.sh",
+	"jdjrsignin": "./bin/jd_jr_signin.sh"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "Auto",
+    "Signin"
+  ],
+  "author": "clearbug",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "log4js": "^1.1.1",
+    "nightmare": "^2.10.0"
+  }
+}

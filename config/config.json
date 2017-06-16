@@ -1,0 +1,36 @@
+{
+    "accounts": {
+        "jingdong": {
+            "password": "",
+            "username": ""
+        },
+        "jingdongjinrong": {
+            "password": "",
+            "username": ""
+        }
+    },
+    "log4js": {
+        "appenders": [
+            {
+                "type": "console"
+            },
+            {
+                "absolute": true,
+                "backups": 3,
+                "category": "autosignin",
+                "filename": "/tmp/autosignin.log",
+                "maxLogSize": 1024,
+                "type": "file"
+            }
+        ],
+        "replaceConsole": true
+    },
+    "nightmare": {
+        "show": true
+    },
+    "site": "jingdongjinrong",
+    "support_sites": [
+        "jingdong",
+        "jingdongjinrong"
+    ]
+}
