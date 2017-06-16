@@ -6,7 +6,7 @@
   "bin": {
     "autosignin": "./bin/auto_signin.sh",
     "jdsignin": "./bin/jd_signin.sh",
-	"jdjrsignin": "./bin/jd_jr_signin.sh"
+    "jdjrsignin": "./bin/jd_jr_signin.sh"
   },
   "scripts": {
     "test": "npm test"
@@ -22,5 +22,17 @@
     "commander": "^2.9.0",
     "log4js": "^1.1.1",
     "nightmare": "^2.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clearbug/auto_signin.git"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
