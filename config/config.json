@@ -19,7 +19,7 @@
                 "backups": 3,
                 "category": "autosignin",
                 "filename": "/tmp/autosignin.log",
-                "maxLogSize": 1024,
+                "maxLogSize": 1048576,
                 "type": "file"
             }
         ],
