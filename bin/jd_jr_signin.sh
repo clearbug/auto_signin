@@ -38,7 +38,7 @@ nightmare
 	.click('#loginsubmit')
 	.wait('#index-qian-btn')
 	.click('#index-qian-btn')
-	.wait('.body > div.mem-sign.bag-popup > div.member-sign > div.sign-center > div > p')
+	.wait('body > div.mem-sign.bag-popup > div.member-sign > div.sign-center > div.sign-cotainer > p')
 	.evaluate(selector => document.querySelector(selector).innerText, 'body > div.mem-sign.bag-popup > div.member-sign > div.sign-center > div.sign-cotainer > p')
 	.end()
 	.then(result => {
