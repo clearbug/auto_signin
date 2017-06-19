@@ -16,6 +16,7 @@ program
 	.option('-i, --personalinfo', 'Show your detail config')
 	.option('-u, --username <your username>', 'Set your username of the site')
 	.option('-p, --password <your password>', 'Set your password of the site')
+	.option('-s, --show <isShow>', 'Set nightmare show')
 	.parse(process.argv);
 
 if(program.personalinfo) {
@@ -23,9 +24,22 @@ if(program.personalinfo) {
 	process.exit();
 }
 
+if(program.show) {
+	if(program.show == 'true') {
+		config.nightmare.show = true;
+	} else if(program.show == 'false') {
+		config.nightmare.show = false;
+	} else {
+		console.log(colors.red('Error: please set the nightmare show to true or false.'));
+	}
+	console.log(colors.green(`Congratulate, success to set the show to ${config.nightmare.show}.`));
+	fs.writeFileSync(path.join(path.parse(__dirname).dir, 'config/config.json'), JSON.stringify(config));
+	process.exit();
+}
+
 if(program.username || program.password) {
 	if(!config.site) {
-		console.log(color.red('Error: Before set the username or password, please to set the site.'));
+		console.log(colors.red('Error: Before set the username or password, please to set the site.'));
 		process.exit();
 	}
 	if(program.username) {
