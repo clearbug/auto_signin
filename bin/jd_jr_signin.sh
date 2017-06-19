@@ -43,9 +43,7 @@ nightmare
 	.end()
 	.then(result => {
 		logger.info('京东金融自动签到结束。签到结果：成功！');
-		console.log(result);
 	})
 	.catch(error => {
 		logger.error('京东金融自动签到结束。签到结果：失败！');
-		console.log('Search failed: ', error);
 	});

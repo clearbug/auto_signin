@@ -1,6 +1,6 @@
 {
   "name": "auto_signin",
-  "version": "3.0.0",
+  "version": "5.0.0",
   "description": "Just auto signin.",
   "main": "index.js",
   "bin": {

@@ -39,13 +39,11 @@ nightmare
 	.wait('.page-container .side-shortcut #checkinBtn')
 	.click('.page-container .side-shortcut #checkinBtn')
 	.wait('body > div.ui-dialog.checkin-dialog.checkin.zoomIn.animated > div.ui-dialog-content > h2')
-	.evaluate(selector => document.querySelector(selector).innerText, 'body > div.ui-dialog.checkin-dialog.checkin.zoomIn.animated > div.ui-dialog-content > h2')
+	.evaluate(selector => document.querySelector(selector).innerText, '#userJdNum')
 	.end()
 	.then(result => {
-		logger.info('京东自动签到结束。签到结果：成功！');
-		console.log(result);
+		logger.info('京东自动签到结束。签到结果：成功！当前京豆数目：' + result);
 	})
 	.catch(error => {
 		logger.error('京东自动签到结束。签到结果：失败！');
-		console.log('Search failed: ', error);
 	});
