@@ -37,7 +37,7 @@ nightmare
 	.type('#nloginpwd', account.password) 
 	.click('#loginsubmit')
 	.wait('#index-qian-btn')
-	.click('#index-qian-btn')
+	.click('a#index-qian-btn > div.qian-icon.x-qian:nth-child(1)')
 	.wait('body > div.mem-sign.bag-popup > div.member-sign > div.sign-center > div.sign-cotainer > p')
 	.evaluate(selector => document.querySelector(selector).innerText, 'body > div.mem-sign.bag-popup > div.member-sign > div.sign-center > div.sign-cotainer > p')
 	.end()
